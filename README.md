@@ -3,6 +3,35 @@
 https://www.cs.cornell.edu/courses/cs3410/2019sp/riscv/interpreter/#
 https://www.cs.cornell.edu/courses/cs3410/2019sp/schedule/
 
+
+---
+
+In RISC-V, the register names have specific meanings and are used for different purposes. There are 32 general-purpose registers, numbered from x0 to x31. Here's a brief overview of the different register names and their meanings:
+
+- x0 (zero): This register is hardwired to zero and cannot be changed. It is used as a source when you need the value zero or as a destination when you want to discard the result of an operation.
+
+- x1 (ra): The return address register. It holds the return address after a function call using the JAL or JALR instruction.
+
+- x2 (sp): The stack pointer register. It points to the top of the stack in memory.
+
+- x3 (gp): The global pointer register. It is typically used to access global variables.
+
+- x4 (tp): The thread pointer register. It is used for thread-local storage.
+
+- x5-x7 (t0-t2): Temporary registers. They are used for holding intermediate values during calculations and can be overwritten without any restrictions.
+
+- x8 (s0/fp): The saved register 0 or frame pointer register. It is used to store the frame pointer in a function call.
+
+- x9 (s1): The saved register 1. It is used to store values that must be preserved across function calls.
+
+- x10-x17 (a0-a7): Argument registers. They are used for passing function arguments. The first 8 function arguments are passed in these registers.
+
+- x18-x27 (s2-s11): Saved registers. They are used to store values that must be preserved across function calls.
+
+- x28-x31 (t3-t6): Temporary registers. Like t0-t2, they are used for holding intermediate values during calculations and can be overwritten without any restrictions.
+
+In summary, the different register names indicate their intended usage in a RISC-V program. This convention makes it easier for programmers to write efficient and organized code.
+
 ---
 
 ## Arithmetics:
